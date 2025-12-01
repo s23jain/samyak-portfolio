@@ -31,12 +31,10 @@ function App() {
           id="hero"
           className="flex min-h-[80vh] flex-col items-center justify-center gap-10 py-16 md:flex-row"
         >
-
           {/* Left content */}
           <div className="w-full md:w-1/2 space-y-4">
-
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-indigo-400">
-              Portfolio  •  2025
+              Portfolio • 2025
             </p>
             <h1 className="text-4xl font-extrabold leading-tight md:text-5xl lg:text-6xl">
               Samyak Jain
@@ -81,28 +79,27 @@ function App() {
           </div>
 
           {/* Right visual block */}
-          <div className="relative mt-6 w-full md:mt-0 md:w-1/2 flex justify-center">
-            <div className="mx-auto h-72 w-72 rounded-[2.25rem] bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-[2px] shadow-[0_0_80px_rgba(129,140,248,0.7)]">
-              <div className="flex h-full w-full flex-col items-center justify-center rounded-[2.1rem] bg-[#020617]/95 backdrop-blur">
-                <div className="mb-6 h-20 w-20 rounded-3xl bg-gradient-to-br from-sky-400 to-indigo-500 shadow-lg shadow-sky-500/40" />
-                <p className="text-[0.65rem] uppercase tracking-[0.3em] text-slate-400">
+          <div className="relative mt-10 flex w-full justify-center md:mt-0 md:w-1/2">
+            <div className="relative h-72 w-72">
+              {/* Outer neon ring */}
+              <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 opacity-70 blur-[2px]" />
+              {/* Main card */}
+              <div className="relative h-full w-full rounded-[2.3rem] bg-[#020617]/90 backdrop-blur-xl border border-white/10 shadow-[0_25px_80px_rgba(15,23,42,0.9)] flex flex-col items-center justify-center transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_35px_100px_rgba(59,130,246,0.6)]">
+                <div className="mb-6 h-20 w-20 rounded-3xl bg-gradient-to-br from-sky-400 to-indigo-500 shadow-lg shadow-sky-500/40 animate-pulse" />
+                <p className="text-[0.65rem] uppercase tracking-[0.35em] text-slate-400">
                   AI & Full Stack
                 </p>
-                <p className="mt-3 px-6 text-center text-sm text-slate-200">
+                <p className="mt-3 px-8 text-center text-sm text-slate-200">
                   React, Node.js and computer vision projects designed to run in production.
                 </p>
               </div>
+              {/* Orbiting glows */}
+              <div className="pointer-events-none absolute -left-10 -top-8 h-24 w-24 rounded-full bg-indigo-500/40 blur-3xl" />
+              <div className="pointer-events-none absolute -right-8 bottom-0 h-24 w-24 rounded-full bg-pink-500/40 blur-3xl" />
             </div>
-            <div className="pointer-events-none absolute -left-10 -top-10 h-28 w-28 rounded-full bg-indigo-500/40 blur-3xl" />
-            <div className="pointer-events-none absolute -right-6 bottom-0 h-28 w-28 rounded-full bg-pink-500/40 blur-3xl" />
           </div>
-
         </section>
 
-
-
-
-        {/* Placeholder sections so navigation works; we’ll fill these later */}
         {/* ABOUT */}
         <section id="about" className="border-t border-white/10 py-16 fade-in">
           <div className="mx-auto max-w-5xl">
@@ -113,7 +110,6 @@ function App() {
               Who is Samyak Jain?
             </h2>
 
-            {/* top text */}
             <p className="mt-4 text-sm leading-relaxed text-gray-300 md:text-base">
               Computer Engineering student focused on{" "}
               <span className="text-indigo-300 font-medium">AI/ML</span> and{" "}
@@ -128,9 +124,8 @@ function App() {
               and refining.
             </p>
 
-            {/* stats + quick facts */}
             <div className="mt-8 grid gap-4 md:grid-cols-3">
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]">
                 <p className="text-xs uppercase tracking-wide text-gray-400">
                   Education
                 </p>
@@ -140,7 +135,7 @@ function App() {
                 <p className="text-xs text-gray-400">Amity University · GPA 7.6/10</p>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]">
                 <p className="text-xs uppercase tracking-wide text-gray-400">
                   Current Role
                 </p>
@@ -152,7 +147,7 @@ function App() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]">
                 <p className="text-xs uppercase tracking-wide text-gray-400">
                   Highlights
                 </p>
@@ -178,8 +173,7 @@ function App() {
             </h2>
 
             <div className="mt-8 space-y-8">
-              {/* F1Jobs */}
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <div className="rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <h3 className="text-base font-semibold md:text-lg">
@@ -200,8 +194,7 @@ function App() {
                 </ul>
               </div>
 
-              {/* CSIR */}
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <div className="rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <h3 className="text-base font-semibold md:text-lg">
@@ -224,7 +217,6 @@ function App() {
           </div>
         </section>
 
-
         {/* PROJECTS */}
         <section id="projects" className="border-t border-white/10 py-16 fade-in">
           <div className="mx-auto max-w-5xl">
@@ -240,8 +232,7 @@ function App() {
             </p>
 
             <div className="mt-8 grid gap-6 md:grid-cols-2">
-              {/* Deforestation Detection */}
-              <article className="flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/20 transition">
+              <article className="rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]">
                 <div>
                   <h3 className="text-lg font-semibold">Deforestation Detection (U‑Net)</h3>
                   <p className="mt-1 text-xs text-gray-400">
@@ -265,8 +256,7 @@ function App() {
                 </div>
               </article>
 
-              {/* Driver Drowsiness */}
-              <article className="flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/20 transition">
+              <article className="rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]">
                 <div>
                   <h3 className="text-lg font-semibold">Driver Drowsiness Detection</h3>
                   <p className="mt-1 text-xs text-gray-400">
@@ -296,8 +286,7 @@ function App() {
                 </div>
               </article>
 
-              {/* Smart Attendance */}
-              <article className="flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/20 transition">
+              <article className="rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]">
                 <div>
                   <h3 className="text-lg font-semibold">Smart Attendance System</h3>
                   <p className="mt-1 text-xs text-gray-400">
@@ -320,13 +309,9 @@ function App() {
                   </a>
                 </div>
               </article>
-
-              {/* F1Jobs (optional later, can fill or leave empty card) */}
-              {/* You can replace this with a real project later or remove it */}
             </div>
           </div>
         </section>
-
 
         {/* SKILLSET */}
         <section id="skills" className="border-t border-white/10 py-16 fade-in">
@@ -342,8 +327,7 @@ function App() {
             </p>
 
             <div className="mt-8 grid gap-6 md:grid-cols-3">
-              {/* Languages */}
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <div className="rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]">
                 <h3 className="text-sm font-semibold text-indigo-300">Languages</h3>
                 <div className="mt-4 space-y-3 text-sm text-gray-200">
                   <div>
@@ -376,8 +360,7 @@ function App() {
                 </div>
               </div>
 
-              {/* Frontend & Backend */}
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <div className="rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]">
                 <h3 className="text-sm font-semibold text-indigo-300">Full Stack</h3>
                 <div className="mt-4 space-y-3 text-sm text-gray-200">
                   <div>
@@ -410,8 +393,7 @@ function App() {
                 </div>
               </div>
 
-              {/* AI / ML */}
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <div className="rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]">
                 <h3 className="text-sm font-semibold text-indigo-300">AI & ML</h3>
                 <div className="mt-4 space-y-3 text-sm text-gray-200">
                   <div>
@@ -445,7 +427,6 @@ function App() {
               </div>
             </div>
 
-            {/* certifications / extras */}
             <div className="mt-6 flex flex-wrap gap-3 text-xs text-gray-300">
               <span className="rounded-full border border-gray-500/60 px-3 py-1">
                 CCNAv7 Certified
@@ -459,7 +440,6 @@ function App() {
             </div>
           </div>
         </section>
-
 
         {/* ACHIEVEMENTS */}
         <section id="achievements" className="border-t border-white/10 py-16 fade-in">
@@ -477,7 +457,7 @@ function App() {
             </p>
 
             <div className="mt-8 grid gap-4 md:grid-cols-2">
-              <div className="rounded-2xl border border-emerald-500/40 bg-emerald-500/5 p-4">
+              <div className="rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]">
                 <p className="text-xs font-semibold uppercase tracking-wide text-emerald-300">
                   Competition
                 </p>
@@ -490,7 +470,7 @@ function App() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-sky-500/40 bg-sky-500/5 p-4">
+              <div className="rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]">
                 <p className="text-xs font-semibold uppercase tracking-wide text-sky-300">
                   Certification
                 </p>
@@ -504,7 +484,7 @@ function App() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-indigo-500/40 bg-indigo-500/5 p-4">
+              <div className="rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]">
                 <p className="text-xs font-semibold uppercase tracking-wide text-indigo-300">
                   AI / ML
                 </p>
@@ -517,7 +497,7 @@ function App() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-purple-500/40 bg-purple-500/5 p-4">
+              <div className="rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]">
                 <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">
                   Academics
                 </p>
@@ -532,7 +512,6 @@ function App() {
             </div>
           </div>
         </section>
-
 
         {/* CONTACT */}
         <section id="contact" className="border-t border-white/10 py-16 fade-in">
@@ -549,9 +528,9 @@ function App() {
             </p>
 
             <div className="mt-8 grid gap-8 md:grid-cols-[1.2fr,1fr]">
-              {/* Contact form (front‑end only) */}
+              {/* Contact form */}
               <form
-                className="space-y-4 rounded-2xl border border-white/10 bg-white/5 p-5"
+                className="space-y-4 rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]"
                 onSubmit={(e) => e.preventDefault()}
               >
                 <div>
@@ -598,11 +577,11 @@ function App() {
 
               {/* Direct contact info */}
               <div className="space-y-4">
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 text-sm text-gray-200">
+                <div className="rounded-3xl border border-white/10 bg-white/5/10 backdrop-blur-xl p-5 md:p-6 shadow-[0_18px_45px_rgba(15,23,42,0.85)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(59,130,246,0.55)]">
                   <p className="text-xs font-semibold uppercase tracking-wide text-indigo-300">
                     Direct contact
                   </p>
-                  <div className="mt-3 space-y-2">
+                  <div className="mt-3 space-y-2 text-sm">
                     <p>
                       <span className="text-gray-400">Email:</span>{" "}
                       <a
@@ -651,7 +630,6 @@ function App() {
             </div>
           </div>
         </section>
-
       </main>
     </div>
   );

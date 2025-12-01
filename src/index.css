@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
-  @apply bg-[#050816] text-white;
+  @apply text-white;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(56,189,248,0.25) 0, transparent 50%),
+    radial-gradient(circle at 90% 100%, rgba(236,72,153,0.22) 0, transparent 55%),
+    radial-gradient(circle at 0% 100%, rgba(59,130,246,0.18) 0, transparent 55%),
+    #020617;
+}
+
+/* Scroll-in animation */
+.fade-in {
+  /* Temporarily show by default */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Keep the visible class for later if you want */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
