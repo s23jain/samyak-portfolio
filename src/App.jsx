@@ -4,6 +4,9 @@ const roles = [
   "Software Developer",
 ];
 
+import samyakPhoto from "./assets/samyak.jpg";
+
+
 function App() {
   return (
     <div className="min-h-screen bg-[#050816] text-white">
@@ -85,7 +88,12 @@ function App() {
               <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 opacity-70 blur-[2px]" />
               {/* Main card */}
               <div className="relative h-full w-full rounded-[2.3rem] bg-[#020617]/90 backdrop-blur-xl border border-white/10 shadow-[0_25px_80px_rgba(15,23,42,0.9)] flex flex-col items-center justify-center transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_35px_100px_rgba(59,130,246,0.6)]">
-                <div className="mb-6 h-20 w-20 rounded-3xl bg-gradient-to-br from-sky-400 to-indigo-500 shadow-lg shadow-sky-500/40 animate-pulse" />
+                <img
+                  src={samyakPhoto}
+                  alt="Samyak Jain"
+                  className="mb-6 h-24 w-24 rounded-3xl object-cover shadow-lg shadow-sky-500/40"
+                />
+
                 <p className="text-[0.65rem] uppercase tracking-[0.35em] text-slate-400">
                   AI & Full Stack
                 </p>
